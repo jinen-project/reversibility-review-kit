@@ -6,9 +6,20 @@ Bounded review specimens for asking whether a proposed change narrows exit, reco
 
 ## Current release
 
-The original prototype has 109 passing local tests. This repository will receive a clean, synthetic-fixture export after its provenance and license review.
+The original prototype has 109 passing local tests. This repository now contains a clean, standard-library-only export of its review engine and test suite under `examples/review-engine`.
 
-元の試作にはローカルで109件の通過テストがあります。ここには、出所とライセンスを確認した合成フィクスチャ付きの最小束だけを追加します。
+元の試作にはローカルで109件の通過テストがあります。ここには、出所を確認した標準ライブラリのみのエンジンとテスト束を `examples/review-engine` として置いています。
+
+## Run the example / 実行例
+
+```sh
+cd examples/review-engine
+python3 -m unittest discover -v
+```
+
+The code accepts abstract observations and proposed placements, then returns a bounded review packet about closure, reversibility, recovery, and accumulated concentration. The test data is synthetic.
+
+抽象化した観測と変更案から、閉鎖・可逆性・回復・集中の観測パケットを返します。テストデータは合成です。
 
 ## Not a claim
 
